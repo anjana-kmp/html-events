@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            border: 2px dashed black;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #result {
+            width: 350px;
+            height: 60px;
+            border: 2px solid black;
+            position: relative;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            font-size: 35px;
+
+        }
+    </style>
+</head>
+
+<body onload="//alert('loaded')" onkeypress="onKeypress(event)">
+
+    <div id="result">
+        hello!!
+    </div>
+    <script>
+        function onKeypress(event) {
+            console.log('keypress: ' + event.keyCode)
+            console.log(String.fromCharCode(93, 94, 95, 96))
+            var resultDiv=document.querySelector('#result')
+            console.dir(resultDiv.innerHTML)
+            resultDiv.innerHTML=( 'keypress: ' + event.keyCode)
+
+
+
+
+            
+
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>
