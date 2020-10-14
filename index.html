@@ -32,29 +32,39 @@
             font-size: 35px;
 
         }
+        #next-result{
+            width: 350px;
+            height: 60px;
+            border: 2px solid black;
+            position: relative;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            font-size: 35px;
+        }
     </style>
 </head>
 
-<body onload="//alert('loaded')" onkeypress="onKeypress(event)">
+<body onkeypress="onKeypress(event)">
 
     <div id="result">
-        hello!!
+        The keypressed
     </div>
+    <div id="next-result">
+        The keycode 
+    </div>
+
     <script>
         function onKeypress(event) {
             console.log('keypress: ' + event.keyCode)
             console.log(String.fromCharCode(93, 94, 95, 96))
             var resultDiv=document.querySelector('#result')
             console.dir(resultDiv.innerHTML)
-            resultDiv.innerHTML=( 'keypress: ' + event.keyCode)
-
-
-
-
+            resultDiv.innerHTML=( 'key: ' + event.key)
+            var resultDiv1=document.querySelector('#next-result')
+            console.log(resultDiv1.innerHTML)
+            resultDiv1.innerHTML=('keyCode:'+event.keyCode)
             
-
-
-
 
         }
     </script>
